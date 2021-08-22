@@ -6,11 +6,8 @@ import sys
 
 def main():
     """Run administrative tasks."""
-<<<<<<< HEAD
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'petstagram.settings')
-=======
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Petstagram.settings')
->>>>>>> 77381b461647123f50ed8f6ceda9724c2872ea36
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
