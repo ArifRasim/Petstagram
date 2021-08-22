@@ -30,8 +30,7 @@ class PetDetailsView(DetailView):
         pet.likes_count = pet.like_set.count()
         is_owner = pet.user == self.request.user
 
-        is_liked_by_user = pet.like_set.filter(user_id=self.request.user.id) \
-            .exists()
+
         context['comment_form'] = CommentForm(
             initial={
                 'pet_pk': self.object.id,
@@ -39,7 +38,6 @@ class PetDetailsView(DetailView):
         )
         context['comments'] = pet.comment_set.all()
         context['is_owner'] = is_owner
-        context['is_liked'] = is_liked_by_user
 
         return context
 
@@ -62,20 +60,11 @@ class CommentPetView(LoginRequiredMixin, PostOnlyView):
         pass
 
 
-class LikePetView(LoginRequiredMixin, View):
-    def post(self, request, *args, **kwargs):
-        pet = Pet.objects.get(pk=self.kwargs['pk'])
-        like_object_by_user = pet.like_set.filter(user_id=self.request.user.id) \
-            .first()
-        if like_object_by_user:
-            like_object_by_user.delete()
-        else:
-            like = Like(
-                pet=pet,
-                user=self.request.user,
-            )
-            like.save()
-        return redirect('pet details', pet.id)
+def like_pet(request, pk):
+    pet = Pet.objects.get(pk=pk)
+    like = Like(pet=pet, )
+    like.save()
+    return redirect('pet details', pet.id)
 
 
 class CreatePetView(LoginRequiredMixin, BootStrapFormViewMixin, CreateView):

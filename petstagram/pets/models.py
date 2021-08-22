@@ -56,9 +56,6 @@ class Pet(models.Model):
         return f'{self.name}, {self.age}, {self.type}'
 
 
+
 class Like(models.Model):
     pet = models.ForeignKey(Pet, on_delete=models.CASCADE)
-    user = models.ForeignKey(
-        UserModel,
-        on_delete=models.CASCADE,
-    )
