@@ -1,0 +1,15 @@
+{% extends 'shared/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+    <form method="POST" class="loginform">
+        <h1 class="centers">Log In</h1>
+
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+        <button type="submit" class=" btn btn-lg btn-primary">Login</button>
+        <a class="center btn  btn-secondary" href="{% url 'register user' %}">Dont have an account ?</a>
+
+    </form>
+{% endblock %}
