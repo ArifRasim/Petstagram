@@ -126,6 +126,7 @@ venv.bak/
 dmypy.json
 
 # Pyre type checker
+<<<<<<< HEAD
 .pyre/
 
 # Docker stuff
@@ -134,3 +135,6 @@ postgresql
 # Jetbrains
 
 .idea
+=======
+.pyre/
+>>>>>>> 77381b461647123f50ed8f6ceda9724c2872ea36
