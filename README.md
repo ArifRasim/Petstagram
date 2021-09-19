@@ -12,4 +12,3 @@
 7.    Django-tests
 ###### The project is completely tested.
 ###### Website link: https://arifrasim.pythonanywhere.com/
-
