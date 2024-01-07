@@ -12,7 +12,6 @@ colour==0.1.5
 cryptography==2.8
 daemonize==2.4.7
 dbus-python==1.2.16
-defer==1.0.6
 distro==1.4.0
 distro-info===0.23ubuntu1
 Django==3.2.3
