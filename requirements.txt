@@ -33,7 +33,6 @@ pytz==2021.1
 pyudev==0.21.0
 PyYAML==5.3.1
 reportlab==3.5.34
-requests==2.22.0
 requests-unixsocket==0.2.0
 six==1.16.0
 sqlparse==0.4.1
