@@ -10,7 +10,6 @@ cloudinary==1.26.0
 colorama==0.4.3
 colour==0.1.5
 cryptography==2.8
-cupshelpers==1.0
 daemonize==2.4.7
 dbus-python==1.2.16
 defer==1.0.6
